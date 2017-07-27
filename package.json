@@ -46,8 +46,8 @@
     "coveralls": "^2.13.1",
     "eslint-config-xo-lukechilds": "^1.0.0",
     "keyv": "*",
-    "nyc": "^11.0.3",
     "keyv-test-suite": "*",
+    "nyc": "^11.0.3",
     "requireable": "^1.0.1",
     "xo": "^0.19.0"
   }
