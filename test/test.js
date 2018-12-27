@@ -16,6 +16,14 @@ test('Collection option merges into default options', t => {
 	});
 });
 
+test('Collection option merges into default options if URL is passed', t => {
+	const store = new KeyvMongo('mongodb://127.0.0.1:27017', { collection: 'foo' });
+	t.deepEqual(store.opts, {
+		url: 'mongodb://127.0.0.1:27017',
+		collection: 'foo'
+	});
+});
+
 test('.delete() with no args doesn\'t empty the collection', async t => {
 	const store = new KeyvMongo('foo'); // Make sure we don't actually connect
 	t.false(await store.delete());
