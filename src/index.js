@@ -39,12 +39,9 @@ class KeyvMongo extends EventEmitter {
 	}
 
 	get(key) {
-		// Return all documents if no key is provided
+		// Return all documents as array of objects if no key is provided
 		if (!key) {
-			return this.mongo.find()
-				.then(
-					docs => docs.map(doc => doc === null ? undefined : doc.value)
-				);
+			return this.mongo.find();
 		}
 
 		// If a key is provided, return only the matching document
