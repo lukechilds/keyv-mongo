@@ -30,7 +30,7 @@ class KeyvMongo extends EventEmitter {
 			expireAfterSeconds: 0,
 			background: true
 		});
-		this.mongo = ['update', 'findOne', 'remove'].reduce((obj, method) => {
+		this.mongo = ['update', 'find', 'findOne', 'remove'].reduce((obj, method) => {
 			obj[method] = pify(collection[method].bind(collection));
 			return obj;
 		}, {});
@@ -39,6 +39,12 @@ class KeyvMongo extends EventEmitter {
 	}
 
 	get(key) {
+		// Return all documents as array of objects if no key is provided
+		if (!key) {
+			return this.mongo.find();
+		}
+
+		// If a key is provided, return only the matching document
 		return this.mongo.findOne({ key })
 			.then(doc => {
 				if (doc === null) {
