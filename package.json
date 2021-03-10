@@ -38,19 +38,19 @@
   },
   "homepage": "https://github.com/lukechilds/keyv-mongo",
   "dependencies": {
-    "mongojs": "2.5.0",
-    "pify": "3.0.0"
+    "mongojs": "3.1.0",
+    "pify": "5.0.0"
   },
   "devDependencies": {
     "@keyv/test-suite": "*",
-    "ava": "^0.25.0",
-    "coveralls": "^3.0.0",
-    "dotenv": "^6.2.0",
-    "eslint-config-xo-lukechilds": "^1.0.0",
+    "ava": "^2.4.0",
+    "coveralls": "^3.1.0",
+    "dotenv": "^8.2.0",
+    "eslint-config-xo-lukechilds": "^1.0.1",
     "keyv": "*",
-    "nyc": "^11.0.3",
-    "requirable": "^1.0.1",
-    "this": "^1.0.2",
-    "xo": "^0.20.1"
+    "nyc": "^14.1.1",
+    "requirable": "^1.0.5",
+    "this": "^1.1.0",
+    "xo": "^0.38.2"
   }
 }
