@@ -1,6 +1,6 @@
 {
   "name": "@keyv/mongo",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "MongoDB storage adapter for Keyv",
   "main": "src/index.js",
   "scripts": {
@@ -38,8 +38,8 @@
   },
   "homepage": "https://github.com/lukechilds/keyv-mongo",
   "dependencies": {
-    "mongojs": "2.5.0",
-    "pify": "3.0.0"
+    "mongojs": "^3",
+    "pify": "^3.0.0"
   },
   "devDependencies": {
     "@keyv/test-suite": "*",
